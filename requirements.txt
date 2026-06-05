@@ -1,0 +1,16 @@
+# Web framework
+fastapi>=0.111.0
+uvicorn[standard]>=0.29.0
+
+# Telegram bot
+aiogram==3.7.0
+
+# OpenAI embeddings
+openai>=1.30.0
+
+# Qdrant vector DB
+qdrant-client>=1.9.0
+
+# Data
+pandas>=2.2.0
+openpyxl>=3.1.2   # needed if you keep working with .xlsx alongside .csv
