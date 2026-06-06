@@ -332,6 +332,11 @@ async def lifespan(app: FastAPI):
 app = FastAPI(title="RealT Bro AI Matching", lifespan=lifespan)
 
 
+@app.get("/")
+async def root():
+    return {"status": "ok"}
+
+
 @app.get("/health")
 async def health():
     return {"status": "ok"}
