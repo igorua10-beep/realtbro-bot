@@ -135,7 +135,6 @@ async def ensure_collection() -> None:
         field_name="status",
         field_schema="keyword",
     )
-    logger.info("Index for 'status' ensured.")
 
 
 async def index_csv(path: str = CSV_PATH) -> None:
@@ -322,6 +321,7 @@ async def _do_search(message: Message, query: str, top_k: int = TOP_K) -> None:
         await message.answer(f"❌ Помилка пошуку: {exc}")
 
 
+# ── FastAPI ───────────────────────────────────────────────────────────────────
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     asyncio.create_task(dp.start_polling(bot, handle_signals=False))
